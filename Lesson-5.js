@@ -1,21 +1,13 @@
 "use strict";
 
-let TAX_RATE = 0.73;
+const TAX_RATE = 0.73;
 let summ = [];
 
-for (let count = 0; count < 10; count ++) {
-    summ.push(function(costOfProd){
-        costOfProd * TAX_RATE; 
-    });
-}
-// function getTaxRate(costOfProd) {
-    // summ.push(function(costOfProd) {
-    //     return (costOfProd * TAX_RATE);
-    // }); 
-    // summ.push(); 
-    // return summ;
-    // * TAX_RATE 
-    // costOfProd * TAX_RATE;
-// }
+summ.push(function(costOfProd) {
+    costOfProd = costOfProd * TAX_RATE;
+    return costOfProd; 
+});
 
 console.log(summ[0](100));
+console.log(summ[0](1000));
+console.log(summ[0](10000));
