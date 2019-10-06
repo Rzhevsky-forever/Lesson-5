@@ -47,3 +47,12 @@ counters[0]();
 counters[0]();
 counters[0]();
 counters[0]();
+
+
+// for(let i = 0; i == summ.length; i++) {
+    //     console.log(summ.length);
+    //     summ.push(function(costOfProd) {
+    //         costOfProd = costOfProd * TAX_RATE;
+    //         return costOfProd; 
+    //     });
+    // }
