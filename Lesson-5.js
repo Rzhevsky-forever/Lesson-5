@@ -15,7 +15,7 @@ function getSumTax(costOfProd) {
     i++
 }
 
-// Поминт и печатает суммы
+// Помнит и печатает суммы
 // не уяснил для чего конструкция вида 
 // arr.push(function(data) { ...; }
 // прошу пояснить
@@ -44,3 +44,25 @@ packUpBox(1,0.2,0.7);
 packUpBox(1,2,7);
 
 // Задание 3
+let batteryCharge = [7, 2, 1, 4, 8];
+console.log(batteryCharge);
+
+batteryCharge[0] = function() {
+    let batteryCharge = 7;
+    batteryCharge = batteryCharge - 1;
+    if(batteryCharge == 0) {
+        console.log('now charge');
+    }
+}
+
+console.log(batteryCharge);
+
+batteryCharge[0]();
+batteryCharge[0]();
+batteryCharge[0]();
+batteryCharge[0]();
+batteryCharge[0]();
+batteryCharge[0]();
+batteryCharge[0]();
+batteryCharge[0];
+
