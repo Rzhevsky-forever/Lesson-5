@@ -56,3 +56,30 @@ counters[0]();
     //         return costOfProd; 
     //     });
     // }
+
+
+// Задание 3 Хорошо работает
+let chargeBatteryData = [7, 2, 1, 4, 8];
+let batteryCharge = 7;
+
+function getBatteryCharge (i) {
+    chargeBatteryData[i] = function() {
+        batteryCharge--;
+        console.log(batteryCharge > 0 ? batteryCharge : 'now charge');
+    }
+    chargeBatteryData[i]();
+}
+
+getBatteryCharge(0);
+getBatteryCharge(0);
+getBatteryCharge(0);
+getBatteryCharge(0);
+getBatteryCharge(0);
+getBatteryCharge(0);
+getBatteryCharge(0);
+getBatteryCharge(0);
+getBatteryCharge(0);
+getBatteryCharge(0);
+getBatteryCharge(0);
+getBatteryCharge(0);
+getBatteryCharge(0);

@@ -44,25 +44,33 @@ packUpBox(1,0.2,0.7);
 packUpBox(1,2,7);
 
 // Задание 3
-let batteryCharge = [7, 2, 1, 4, 8];
-console.log(batteryCharge);
+let powerBalance = [7, 2, 1, 4, 8];
+let batteryPowerCounters = [];
 
-batteryCharge[0] = function() {
-    let batteryCharge = 7;
-    batteryCharge = batteryCharge - 1;
-    if(batteryCharge == 0) {
-        console.log('now charge');
+for(let i = 0; i < 5; i++) { // Перебираем телепорты
+    function getBatteryPower () {
+        switch (powerBalance[i]) {
+            case 0:
+                console.log(`Телепорт ${i + 1} недоступен, перезаряжается`);
+                break;
+            case 1:
+                powerBalance[i]--;
+                console.log(`Телепорт ${i + 1} использован, заряд — ${powerBalance[i]} единиц, требуется перезарядка!`);
+                break;
+            default:
+                powerBalance[i]--;
+                console.log(`Телепорт ${i + 1} использован, заряд — ${powerBalance[i]} единиц`);
+                break;
+        }
     }
+    batteryPowerCounters.push(getBatteryPower);
 }
 
-console.log(batteryCharge);
-
-batteryCharge[0]();
-batteryCharge[0]();
-batteryCharge[0]();
-batteryCharge[0]();
-batteryCharge[0]();
-batteryCharge[0]();
-batteryCharge[0]();
-batteryCharge[0];
-
+batteryPowerCounters[0]();
+batteryPowerCounters[1]();
+batteryPowerCounters[1]();
+batteryPowerCounters[1]();
+batteryPowerCounters[1]();
+batteryPowerCounters[2]();
+batteryPowerCounters[2]();
+batteryPowerCounters[3]();
